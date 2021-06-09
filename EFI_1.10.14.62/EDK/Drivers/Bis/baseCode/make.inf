@@ -1,0 +1,74 @@
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for EDK\Drivers\Bis\baseCode
+#
+# Revision History
+#
+
+
+[sources]
+        efibis_basecode.c
+        util\codemapping.c
+        util\collection.c
+        util\getSysGuid.c
+        util\dbgPrint.c
+        util\nvm.c
+        util\sha1Digest.c
+        util\stringFxns.c
+        util\cssmMemFxns.c
+        bisFuncs\oasis_init.c
+        bisFuncs\core_getBOAUT.c
+        bisFuncs\core_updt_Boa.c
+        bisFuncs\core_ver_BO.c
+        bisFuncs\core_ver_OWC.c
+        util\mem.c
+        util\getSigner.c
+        util\prepSmH.c
+        util\GetDO.c
+        util\bisauthorize.c
+        util\parmBlockAdaptors.c
+        util\efibis_authFxns.c
+        util\efibis_persist.c
+
+[includes]
+        .
+        $(EFI_SOURCE)\Edk
+        $(EFI_SOURCE)\Edk\include
+        $(EFI_SOURCE)\Edk\drivers\pxebc
+        $(EFI_SOURCE)\Edk\Lib\include
+        $(EFI_SOURCE)\Edk\drivers\bis\inc
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\inc
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\inc\intel
+
+[libraries]
+        $(EFI_SOURCE)\Edk\Lib\EfiCommonLib
+        $(EFI_SOURCE)\Edk\Lib\EfiDriverLib
+        $(EFI_SOURCE)\Edk\Lib\Print
+        $(EFI_SOURCE)\Edk\Protocol
+        $(EFI_SOURCE)\Edk\Guid
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\src\addins\intel\cssmcl
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\src\addins\intel\cssmcsp
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\src\addins\intel\cssmvl
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\src\fwk\port
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\src\fwk\util\ber_der\r1_1
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\src\icl
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\src\fwk\cssm
+        $(EFI_SOURCE)\Edk\drivers\bis\oasis\src\integrity
+
+[nmake]
+        IMAGE_ENTRY_POINT=EFIBIS_BaseCodeModuleInit
+        TARGET_BS_DRIVER=bis

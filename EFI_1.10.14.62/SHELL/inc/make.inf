@@ -1,0 +1,19 @@
+#
+# Copyright (c) 2001 - 2002  Intel Corporation
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for Shell command include files
+#
+# Revision History
+#
+
+[sources]
+  shelldef11.h
+  shell.h
+  shellenv.h
+

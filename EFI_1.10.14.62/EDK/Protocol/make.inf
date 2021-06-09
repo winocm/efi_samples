@@ -1,0 +1,128 @@
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for EDK\Protocol
+#
+# Revision History
+#
+
+[sources]
+  Bis\Bis.c
+  Bis\Bis.h
+  BlockIo\BlockIo.c
+  BlockIo\BlockIo.h
+  BusSpecificDriverOverride\BusSpecificDriverOverride.c
+  BusSpecificDriverOverride\BusSpecificDriverOverride.h
+  ComponentName\ComponentName.c
+  ComponentName\ComponentName.h
+  ConsoleControl\ConsoleControl.c
+  ConsoleControl\ConsoleControl.h
+  DebugPort\DebugPort.c
+  DebugPort\DebugPort.h
+  DebugSupport\DebugSupport.c
+  DebugSupport\DebugSupport.h
+  Decompress\Decompress.c
+  Decompress\Decompress.h
+  DeviceIo\DeviceIo.c
+  DeviceIo\DeviceIo.h
+  DevicePath\DevicePath.c
+  DevicePath\DevicePath.h
+  DiskIo\DiskIo.c
+  DiskIo\DiskIo.h
+  DriverBinding\DriverBinding.c
+  DriverBinding\DriverBinding.h
+  DriverConfiguration\DriverConfiguration.c
+  DriverConfiguration\DriverConfiguration.h
+  DriverDiagnostics\DriverDiagnostics.c
+  DriverDiagnostics\DriverDiagnostics.h
+  Ebc\Ebc.c
+  Ebc\Ebc.h
+  EbcDebugHelper\EbcDebugHelper.c
+  EbcDebugHelper\EbcDebugHelper.h
+  EfiNetworkInterfaceIdentifier\EfiNetworkInterfaceIdentifier.c
+  EfiNetworkInterfaceIdentifier\EfiNetworkInterfaceIdentifier.h
+  IsaIo\IsaIo.h
+  IsaIo\IsaIo.c
+  IsaAcpi\IsaAcpi.h
+  IsaAcpi\IsaAcpi.c
+  LoadFile\LoadFile.c
+  LoadFile\LoadFile.h
+  LoadedImage\LoadedImage.c
+  LoadedImage\LoadedImage.h
+  PciIo\PciIo.c
+  PciIo\PciIo.h
+  PciRootBridgeIo\PciRootBridgeIo.c
+  PciRootBridgeIo\PciRootBridgeIo.h
+  PlatformDriverOverride\PlatformDriverOverride.c
+  PlatformDriverOverride\PlatformDriverOverride.h
+  PxeBaseCodeCallBack\PxeBaseCodeCallBack.c
+  PxeBaseCodeCallBack\PxeBaseCodeCallBack.h
+  PxeBaseCode\PxeBaseCode.c
+  PxeBaseCode\PxeBaseCode.h
+  PxeDhcp4\PxeDhcp4.c
+  PxeDhcp4\PxeDhcp4.h
+  PxeDhcp4Callback\PxeDhcp4Callback.c
+  PxeDhcp4Callback\PxeDhcp4Callback.h
+  ScsiIo\ScsiIo.c
+  ScsiIo\ScsiIo.h
+  ScsiPassThru\ScsiPassThru.c
+  ScsiPassThru\ScsiPassThru.h
+  SerialIo\SerialIo.c
+  SerialIo\SerialIo.h
+  SimpleFileSystem\SimpleFileSystem.c
+  SimpleFileSystem\FileInfo.c
+  SimpleFileSystem\FileInfoId.c
+  SimpleFileSystem\FileSystemVolumeLableInfo.c
+  SimpleFileSystem\SimpleFileSystem.h
+  SimpleNetwork\SimpleNetwork.c
+  SimpleNetwork\SimpleNetwork.h
+  SimplePointer\SimplePointer.c
+  SimplePointer\SimplePointer.h
+  SimpleTextIn\SimpleTextIn.c
+  SimpleTextIn\SimpleTextIn.h
+  SimpleTextOut\SimpleTextOut.c
+  SimpleTextOut\SimpleTextOut.h
+  Tcp\Tcp.c
+  Tcp\Tcp.h
+  UgaDraw\UgaDraw.h
+  UgaDraw\UgaDraw.c
+  UgaIo\UgaIo.h
+  UgaIo\UgaIo.c
+  UgaSplash\UgaSplash.h
+  UgaSplash\UgaSplash.c
+  UnicodeCollation\UnicodeCollation.c
+  UnicodeCollation\UnicodeCollation.h
+  UsbIo\UsbIo.c
+  UsbIo\UsbIo.h
+  UsbHostController\UsbHostController.c
+  UsbHostController\UsbHostController.h
+  UsbAtapi\UsbAtapi.c
+  UsbAtapi\UsbAtapi.h
+  VgaMiniPort\VgaMiniPort.h
+  VgaMiniPort\VgaMiniPort.c
+  WinNtIo\WinNtIo.c
+  WinNtIo\WinNtIo.h
+  WinNtThunk\WinNtThunk.c
+  WinNtThunk\WinNtThunk.h
+  Ps2Policy\Ps2Policy.c
+  Ps2Policy\Ps2Policy.h
+
+[includes]
+  $(EFI_SOURCE)\Edk
+  $(EFI_SOURCE)\Edk\include
+
+[nmake]
+C_STD_INCLUDE=

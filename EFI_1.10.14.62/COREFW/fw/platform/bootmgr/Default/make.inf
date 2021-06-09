@@ -1,0 +1,56 @@
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for COREFW\fw\platform\bootmgr\Default
+#
+# Revision History
+#
+
+[sources]
+    data.c
+    display.c
+    init.c
+    lang.c
+    load.c
+    strings.c
+    banner.c
+    Default.c
+    var.c
+    bm.h
+    lang.h
+
+[ia32sources]
+    BmMachine.h
+
+[ipfsources]
+    BmMachine.h
+
+[libraries]
+    $(EFI_SOURCE)\lib
+    $(EFI_SOURCE)\Corefw\Fw\Platform\Lib
+    $(EFI_SOURCE)\Edk\Protocol
+
+[includes]
+    .
+    $(EFI_SOURCE)\inc\protocol
+    $(EFI_SOURCE)\corefw\fw\platform\inc
+    $(EFI_SOURCE)\corefw\fw\inc
+    $(EFI_SOURCE)\inc
+    $(EFI_SOURCE)\edk
+
+[nmake]
+    IMAGE_ENTRY_POINT=InitializeBootManager
+    TARGET_APP=bootmgr

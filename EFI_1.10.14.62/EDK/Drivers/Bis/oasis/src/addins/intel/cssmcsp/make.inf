@@ -1,0 +1,53 @@
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for EDK\Drivers\Bis\oasis\src\addins\intel\cssmcsp
+#
+# Revision History
+#
+
+
+[sources]
+	intelcsp\csm_bis\csp_auth.c
+	intelcsp\csm_bis\csp_dgst.c
+	intelcsp\csm_bis\csp_icl_dsa.c
+	intelcsp\csm_bis\csp_qksz.c
+	intelcsp\csm_bis\csp_reg.c
+	intelcsp\csm_bis\csp_vrfy.c
+	tal\tal_cntx.c
+	tal\tal_cspi.c
+	tal\keyfmt\tal_fips186.c
+	tal\tal_glob.c
+	tal\tal_kprs.c
+	tal\tal_mem.c
+	tal\tal_reg.c
+	tal\tal_util.c
+
+	
+[includes]
+	.
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\src\addins\intel\cssmcsp\tal
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\src\addins\intel\cssmcsp\intelcsp\csm_bis
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\inc
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\inc\intel
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\src\icl\include
+
+[libraries]
+	$(EFI_SOURCE)\Edk\lib\efidriverlib
+
+[nmake]
+	MODULE_CFLAGS = /D"OASIS" /D"CSSM_BIS"
+	TARGET_LIBRARY=CSSMCSP

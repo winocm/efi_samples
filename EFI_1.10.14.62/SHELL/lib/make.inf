@@ -1,0 +1,32 @@
+#
+# Copyright (c) 2001 - 2002  Intel Corporation
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for Shell libs
+#
+# Revision History
+#
+
+
+[sources]
+  data.c
+  init.c
+  misc.c
+  io.c
+  helpinfo.c
+  ..\helpdata\helpdata.c
+
+[includes]
+  .
+  $(EFI_SOURCE)\shell\inc
+  $(EFI_SOURCE)\shell\shellenv
+  $(EFI_SOURCE)\shell\lib
+  $(EFI_SOURCE)\Inc
+  $(EFI_SOURCE)\Inc\Protocol
+  $(EFI_SOURCE)\Lib
+  $(EFI_SOURCE)\Edk

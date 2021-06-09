@@ -1,0 +1,35 @@
+#
+# Copyright (c) 2001 - 2002  Intel Corporation
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for Shell command cp
+#
+# Revision History
+#
+
+[sources]
+  cp.c
+
+[includes]
+  .
+  $(EFI_SOURCE)\shell\inc
+  $(EFI_SOURCE)\shell\shellenv
+  $(EFI_SOURCE)\shell\lib
+  $(EFI_SOURCE)\Inc
+  $(EFI_SOURCE)\Inc\Protocol
+  $(EFI_SOURCE)\Lib
+  $(EFI_SOURCE)\Edk
+  
+[libraries]
+  $(EFI_SOURCE)\lib
+  $(EFI_SOURCE)\shell\lib
+  $(EFI_SOURCE)\Edk\Protocol
+  
+[nmake]
+  IMAGE_ENTRY_POINT=InitializeCP
+  TARGET_APP=cp

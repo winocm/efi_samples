@@ -1,0 +1,5 @@
+buildtools:
+	$(MAKE) -f $(EFI_SOURCE)\BUILD\Tools\src\makefile
+
+cleantools:
+	$(MAKE) -f $(EFI_SOURCE)\BUILD\Tools\src\makefile clean

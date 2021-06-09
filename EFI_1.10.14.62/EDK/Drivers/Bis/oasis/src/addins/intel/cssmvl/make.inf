@@ -1,0 +1,45 @@
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for EDK\Drivers\Bis\oasis\src\addins\intel\cssmvl
+#
+# Revision History
+#
+
+[sources]
+	sm_vl\smvl_do.c
+	sm_vl\smvl_domap.c
+	sm_vl\smvl_instant.c
+	sm_vl\smvl_main.c
+	sm_vl\smvl_signer.c
+	sm_vl\smvl_util.c
+	sm_vl\smvl_verify.c
+	
+
+	
+[includes]
+	.
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\inc
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\inc\intel
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\src\integrity\inc
+
+[libraries]
+	$(EFI_SOURCE)\Edk\efidriverlib
+
+
+[nmake]
+	MODULE_CFLAGS = /D"OASIS" /D"CSSM_BIS"
+	TARGET_LIBRARY=CSSMVL

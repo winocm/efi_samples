@@ -1,0 +1,58 @@
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+#
+# Module Name:
+#
+#   make.inf
+#    
+# Abstract:
+#
+#   FAT driver written to the EFI 1.1 driver model
+#
+# Revision History
+#
+
+[sources]
+  Data.c
+  Delete.c
+  Dirent.c
+  Dirsup.c
+  Fat.c
+  Flush.c
+  Fname.c
+  Fspace.c
+  Hash.c
+  Info.c
+  Init.c
+  Misc.c
+  Open.c
+  Openvol.c
+  Rw.c
+  Cache.c
+  Fat.h
+  FatFs.h
+  ComponentName.c
+
+[includes]
+  .
+  $(EFI_SOURCE)\Edk
+  $(EFI_SOURCE)\Edk\Include
+  $(EFI_SOURCE)\Edk\Lib\Include
+
+[libraries]
+  $(EFI_SOURCE)\Edk\Lib\EfiCommonLib
+  $(EFI_SOURCE)\Edk\Lib\EfiDriverLib
+  $(EFI_SOURCE)\Edk\Lib\Print
+  $(EFI_SOURCE)\Edk\Protocol
+  $(EFI_SOURCE)\Edk\Guid
+
+[nmake]
+  IMAGE_ENTRY_POINT=FatEntryPoint
+  TARGET_BS_DRIVER=Fat

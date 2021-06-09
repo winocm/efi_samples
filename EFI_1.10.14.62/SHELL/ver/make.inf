@@ -1,0 +1,43 @@
+#
+# Copyright (c) 2001 - 2002  Intel Corporation
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for Shell command ver
+#
+# Revision History
+#
+
+
+[sources]
+  ver.c
+  ver.h
+
+[ia32sources]
+  ver32.c
+
+[ipfsources]
+  ver64.c
+
+[includes]
+  .
+  $(EFI_SOURCE)\shell\inc
+  $(EFI_SOURCE)\shell\shellenv
+  $(EFI_SOURCE)\shell\lib
+  $(EFI_SOURCE)\Inc
+  $(EFI_SOURCE)\Inc\Protocol
+  $(EFI_SOURCE)\Lib
+  $(EFI_SOURCE)\Edk
+  
+[libraries]
+  $(EFI_SOURCE)\lib
+  $(EFI_SOURCE)\shell\lib
+  $(EFI_SOURCE)\Edk\Protocol
+
+[nmake]
+  IMAGE_ENTRY_POINT=InitializeVer
+  TARGET_APP=ver

@@ -1,0 +1,179 @@
+#
+# Copyright (c) 2001 - 2002  Intel Corporation
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for Shell
+#
+# Revision History
+#
+
+[sources]
+  lib\data.c
+  lib\init.c
+  lib\misc.c
+  lib\io.c
+  lib\helpinfo.c
+  helpdata\helpdata.c
+
+  newshell\init.c
+  newshell\nshell.h
+
+  shellenv\cmddisp.c
+  shellenv\connect.c
+  shellenv\data.c
+  shellenv\exec.c
+  shellenv\init.c
+  shellenv\protid.c
+  shellenv\var.c
+  shellenv\conio.c
+  shellenv\handle.c
+  shellenv\dprot.c
+  shellenv\map.c
+  shellenv\marg.c
+  shellenv\batch.c
+  shellenv\if.c
+  shellenv\goto.c
+  shellenv\echo.c
+  shellenv\pause.c
+  shellenv\for.c
+  shellenv\mount.c
+  shellenv\wait.c
+  shellenv\help.c
+
+  shellenv\shelle.h
+
+  attrib\attrib.c
+
+  bcfg\bcfg.c
+
+  cls\cls.c
+
+  comp\comp.c
+
+  cp\cp.c
+
+  date\date.c
+
+  EfiCompress\compressMain.c
+  EfiCompress\compress.c
+  EfiCompress\compress.h
+
+  EfiDecompress\decompress.c
+
+  LoadPciRom\LoadPciRom.c
+
+  edit\editor.h
+  edit\editortype.h
+  edit\main.c
+  edit\libFileBuffer.c
+  edit\libEditor.c
+  edit\libTitleBar.c
+  edit\libStatusBar.c
+  edit\libInputBar.c
+  edit\libMenuBar.c
+  edit\libMisc.c
+
+  hexedit\heditor.h
+  hexedit\heditortype.h
+  hexedit\main.c
+  hexedit\libBufferImage.c
+  hexedit\libFileImage.c
+  hexedit\libDiskImage.c
+  hexedit\libMemImage.c
+  hexedit\libEditor.c
+  hexedit\libTitleBar.c
+  hexedit\libStatusBar.c
+  hexedit\libInputBar.c
+  hexedit\libMenuBar.c
+  hexedit\libClipBoard.c
+  hexedit\libMisc.c
+
+  load\load.c
+
+  ls\ls.c
+
+  memmap\memmap.c
+
+  mkdir\mkdir.c
+
+  mode\mode.c
+
+  mv\mv.c
+
+  reset\reset.c
+
+  rm\rm.c
+
+  type\type.c
+
+  time\time.c
+
+  vol\vol.c
+
+  debug\dblk.c
+  debug\efidump.c
+
+  mem\mem.c
+
+  dmpstore\dmpstore.c
+
+  err\err.c
+
+  getmtc\getmtc.c
+
+  iomod\iomod.c
+
+  pci\pci.c
+  pci\pci_class.c
+
+  setsize\setsize.c
+
+  stall\stall.c
+
+  touch\touch.c
+
+  ver\ver.c
+  ver\ver.h
+
+  LoadBmp\LoadBmp.c
+
+#  BootMaint\bootmaint.c
+#  BootMaint\bootmaint.h
+#  BootMaint\menu.c
+#  BootMaint\timeout.c
+#  BootMaint\data.c
+#  BootMaint\console.c
+#  BootMaint\bootoption.c
+#  BootMaint\lang.c
+#  BootMaint\filemenu.c
+
+[ia32sources]
+  ver\ia32\ver32.c
+
+[ipfsources]
+  ver\ipf\ver64.c
+
+
+[includes]
+  .
+  $(EFI_SOURCE)\shell\inc
+  $(EFI_SOURCE)\shell\shellenv
+  $(EFI_SOURCE)\shell\lib
+  $(EFI_SOURCE)\Inc
+  $(EFI_SOURCE)\Inc\Protocol
+  $(EFI_SOURCE)\Lib
+  $(EFI_SOURCE)\Edk
+
+[libraries]
+  $(EFI_SOURCE)\lib
+  $(EFI_SOURCE)\Edk\Protocol
+  $(EFI_SOURCE)\Edk\Guid
+
+[nmake]
+  IMAGE_ENTRY_POINT=InitializeShell
+  TARGET_APP=Shell

@@ -1,0 +1,49 @@
+#
+# Copyright (c) 2001 - 2002  Intel Corporation
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for Shell command hexedit
+#
+# Revision History
+#
+
+[sources]
+  heditor.h
+  heditortype.h
+  main.c
+  libBufferImage.c
+  libFileImage.c
+  libDiskImage.c
+  libMemImage.c
+  libEditor.c
+  libTitleBar.c
+  libStatusBar.c
+  libInputBar.c
+  libMenuBar.c
+  libClipBoard.c
+  libMisc.c
+
+[includes]
+  .
+  $(EFI_SOURCE)\shell\inc
+  $(EFI_SOURCE)\shell\shellenv
+  $(EFI_SOURCE)\shell\lib
+  $(EFI_SOURCE)\Inc
+  $(EFI_SOURCE)\Inc\Protocol
+  $(EFI_SOURCE)\Lib
+  $(EFI_SOURCE)\Edk
+  
+[libraries]
+  $(EFI_SOURCE)\lib
+  $(EFI_SOURCE)\shell\lib
+  $(EFI_SOURCE)\Edk\Protocol
+  $(EFI_SOURCE)\Edk\Guid
+
+[nmake]
+  IMAGE_ENTRY_POINT=InitializeEFIHexEditor
+  TARGET_APP=hexedit

@@ -1,0 +1,48 @@
+#/*++
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+
+#
+#  Module Name:
+#
+#    make.Inf
+#
+#  Abstract:
+#
+#    GenHelp tool user's guide
+#
+#--*/
+
+
+Usage:
+
+1: Update Unicode text file "helpdata.src" using following format.
+
+<!>cmd1name
+<1>cmd1syntax
+<2>cmd1linehelp
+<3>cmd1verboseHelp
+
+<!>cmd2name
+<1>cmd2syntax
+<2>cmd2linehelp
+<3>cmd2verboseHelp
+...
+
+2: Run (double-click) GenHelp.exe to generate "helpdata.c".
+
+
+Notes:
+1. Helpdata.src is a Unicode text file.
+2. All the help information including syntax, line help info, verbose help info shall be added into helpdata.src.
+3. When user want to add/update help info for one command, he/she only need to update helpdata.src, and run GenHelp.exe to generate new helpdata.c. They should not directly add help info in source file of the command.
+4. Helpdata.c should be always placed in shell\helpdata directory.
+5. The tag <!>, <1>,<2> and <3> for one command should always be there. If one command does not contain verbose help info, user still need to type '<3>' and leave blank after that.
+6. Only when a Cmd has both CmdName and CmdLineHelp in HelpData.src, it can be listed with 'help'.

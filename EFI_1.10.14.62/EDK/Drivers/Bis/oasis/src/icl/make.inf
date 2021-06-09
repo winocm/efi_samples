@@ -1,0 +1,64 @@
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for EDK\Drivers\Bis\oasis\src\icl
+#
+# Revision History
+#
+
+
+[sources]
+	C\rsa1024\add.c
+	C\iclproc\bytes.c
+ 	C\rsa1024\compare.c
+	C\rsakg\div.c
+	C\rsakg\eea.c
+	C\rsa1024\modexp.c
+	C\rsakg\modinv.c
+	C\rsa1024\modmul.c
+	C\rsa1024\monpro.c
+	C\rsa1024\monsqu.c
+	C\iclproc\move.c
+	C\rsa1024\mul.c
+	C\rsa1024\n0prime.c
+	C\rsa1024\rem.c
+	C\sha\shabegin.c
+	C\pbe\shades.c
+	C\sha\shaend.c
+	C\sha\shaproc.c
+	C\sha\shatrans.c
+	C\rsa1024\subtract.c
+	C\dss\verifymd.c
+	
+
+	
+[includes]
+	.
+	$(EFI_SOURCE)\Edk
+	$(EFI_SOURCE)\Edk\include
+	$(EFI_SOURCE)\Edk\lib\efidriverlib
+	$(EFI_SOURCE)\Edk\lib\include
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\src\icl\include
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\inc
+	$(EFI_SOURCE)\Edk\drivers\bis\oasis\inc\intel
+
+[libraries]
+	$(EFI_SOURCE)\Edk\lib\efidriverlib
+
+
+[nmake]
+	MODULE_CFLAGS = /D"OASIS" /D"CSSM_BIS"
+	TARGET_LIBRARY=Icl

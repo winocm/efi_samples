@@ -1,0 +1,33 @@
+#
+# Copyright (c)  1999 - 2002 Intel Corporation. All rights reserved
+# This software and associated documentation (if any) is furnished
+# under a license and may only be used or copied in accordance
+# with the terms of the license. Except as permitted by such
+# license, no part of this software or documentation may be
+# reproduced, stored in a retrieval system, or transmitted in any
+# form or by any means without the express written consent of
+# Intel Corporation.
+#
+# Module Name:
+#
+#    make.inf
+#    
+# Abstract:
+#
+#    Makefile for EDK\Drivers\Bis\oasis\src\addins\intel\cssmcsp\tal
+#
+# Revision History
+#
+
+
+[sources]
+    	tal_cntx.h
+	tal_csp.h
+	tal_cspi.h
+	tal_defs.h
+	tal_glob.h
+	tal_inc.h
+	tal_kprs.h
+	tal_mem.h
+	tal_reg.h
+	tal_util.h
